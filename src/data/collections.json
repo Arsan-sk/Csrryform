@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "womens-edit",
+    "title": "The Women's Edit",
+    "audience": "womens",
+    "description": "A curated selection of handbags and everyday styles.",
+    "heroImageUrl": "/images/collections/womens-edit-hero.jpg",
+    "isFeatured": true,
+    "sortOrder": 1,
+    "isActive": true,
+    "contentStatus": "demo"
+  },
+  {
+    "slug": "school-student",
+    "title": "School & Student",
+    "audience": "student",
+    "description": "Bags for school days, study days, and everyday routines.",
+    "heroImageUrl": "/images/collections/school-student-hero.jpg",
+    "isFeatured": true,
+    "sortOrder": 2,
+    "isActive": true,
+    "contentStatus": "demo"
+  },
+  {
+    "slug": "everyday-carry",
+    "title": "Everyday Carry",
+    "audience": "everyday",
+    "description": "Versatile options for the rhythm of the day.",
+    "heroImageUrl": "/images/collections/everyday-carry-hero.jpg",
+    "isFeatured": true,
+    "sortOrder": 3,
+    "isActive": true,
+    "contentStatus": "demo"
+  }
+]
+

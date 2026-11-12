@@ -1,0 +1,33 @@
+[
+  {
+    "slug": "handbags",
+    "name": "Handbags",
+    "audience": "womens"
+  },
+  {
+    "slug": "shoulder-bags",
+    "name": "Shoulder Bags",
+    "audience": "womens"
+  },
+  {
+    "slug": "totes",
+    "name": "Tote Bags",
+    "audience": "womens"
+  },
+  {
+    "slug": "sling-bags",
+    "name": "Sling & Crossbody Bags",
+    "audience": "womens"
+  },
+  {
+    "slug": "school-backpacks",
+    "name": "School Backpacks",
+    "audience": "student"
+  },
+  {
+    "slug": "college-backpacks",
+    "name": "College Backpacks",
+    "audience": "student"
+  }
+]
+

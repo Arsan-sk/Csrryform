@@ -1,0 +1,33 @@
+[
+  {
+    "label": "Women's Bags",
+    "href": "/collections/womens-edit",
+    "children": [
+      { "label": "Handbags", "href": "/collections/womens-edit?category=handbags" },
+      { "label": "Shoulder Bags", "href": "/collections/womens-edit?category=shoulder-bags" },
+      { "label": "Sling & Crossbody Bags", "href": "/collections/womens-edit?category=sling-bags" },
+      { "label": "Tote Bags", "href": "/collections/womens-edit?category=totes" }
+    ]
+  },
+  {
+    "label": "School & Student",
+    "href": "/collections/school-student",
+    "children": [
+      { "label": "School Backpacks", "href": "/collections/school-student?category=school-backpacks" },
+      { "label": "College Backpacks", "href": "/collections/school-student?category=college-backpacks" }
+    ]
+  },
+  {
+    "label": "Everyday & Travel",
+    "href": "/collections/everyday-carry"
+  },
+  {
+    "label": "About",
+    "href": "/about"
+  },
+  {
+    "label": "Contact",
+    "href": "/contact"
+  }
+]
+

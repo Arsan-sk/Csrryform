@@ -1,0 +1,690 @@
+{
+  "meta": {
+    "brand": "CARRYFORM",
+    "tagline": "Every day has a way to carry.",
+    "contentStatus": "demo",
+    "note": "All sample product names, prices, URLs, and specifications are placeholders. Replace with verified shop data before launch.",
+    "planningMix": {
+      "womens": 0.65,
+      "student": 0.35
+    }
+  },
+  "categories": [
+    {
+      "slug": "handbags",
+      "name": "Handbags",
+      "audience": "womens"
+    },
+    {
+      "slug": "shoulder-bags",
+      "name": "Shoulder Bags",
+      "audience": "womens"
+    },
+    {
+      "slug": "totes",
+      "name": "Tote Bags",
+      "audience": "womens"
+    },
+    {
+      "slug": "sling-bags",
+      "name": "Sling & Crossbody Bags",
+      "audience": "womens"
+    },
+    {
+      "slug": "school-backpacks",
+      "name": "School Backpacks",
+      "audience": "student"
+    },
+    {
+      "slug": "college-backpacks",
+      "name": "College Backpacks",
+      "audience": "student"
+    }
+  ],
+  "collections": [
+    {
+      "slug": "womens-edit",
+      "title": "The Women's Edit",
+      "audience": "womens",
+      "description": "A curated selection of handbags and everyday styles.",
+      "isFeatured": true,
+      "contentStatus": "demo"
+    },
+    {
+      "slug": "school-student",
+      "title": "School & Student",
+      "audience": "student",
+      "description": "Bags for school days, study days, and everyday routines.",
+      "isFeatured": true,
+      "contentStatus": "demo"
+    },
+    {
+      "slug": "everyday-carry",
+      "title": "Everyday Carry",
+      "audience": "everyday",
+      "description": "Versatile options for the rhythm of the day.",
+      "isFeatured": true,
+      "contentStatus": "demo"
+    }
+  ],
+  "products": [
+    {
+      "id": "demo-w01",
+      "slug": "forma-structured-handbag",
+      "name": "Forma Structured Handbag",
+      "audience": "womens",
+      "type": "handbag",
+      "categorySlug": "handbags",
+      "collectionSlugs": [
+        "womens-edit"
+      ],
+      "shortDescription": "A clean-lined silhouette for everyday styling.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-01.webp",
+          "role": "primary",
+          "alt": "Demo structured handbag on a neutral studio background"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "flags": {
+        "featured": true,
+        "new": false,
+        "active": true
+      },
+      "contentStatus": "demo"
+    },
+    {
+      "id": "demo-w02",
+      "slug": "arc-shoulder-bag",
+      "name": "Arc Shoulder Bag",
+      "audience": "womens",
+      "type": "shoulder_bag",
+      "categorySlug": "shoulder-bags",
+      "collectionSlugs": [
+        "womens-edit"
+      ],
+      "shortDescription": "A versatile shoulder-bag concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-02.webp",
+          "role": "primary",
+          "alt": "Demo shoulder bag product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "flags": {
+        "featured": true,
+        "new": true,
+        "active": true
+      },
+      "contentStatus": "demo"
+    },
+    {
+      "id": "demo-w03",
+      "slug": "daylight-tote",
+      "name": "Daylight Tote",
+      "audience": "womens",
+      "type": "tote",
+      "categorySlug": "totes",
+      "collectionSlugs": [
+        "womens-edit",
+        "everyday-carry"
+      ],
+      "shortDescription": "A roomy tote concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-03.webp",
+          "role": "primary",
+          "alt": "Demo tote bag product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "flags": {
+        "featured": true,
+        "new": false,
+        "active": true
+      },
+      "contentStatus": "demo"
+    },
+    {
+      "id": "demo-w04",
+      "slug": "linea-crossbody",
+      "name": "Linea Crossbody",
+      "audience": "womens",
+      "type": "sling",
+      "categorySlug": "sling-bags",
+      "collectionSlugs": [
+        "womens-edit"
+      ],
+      "shortDescription": "A compact crossbody concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-04.webp",
+          "role": "primary",
+          "alt": "Demo crossbody bag product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "flags": {
+        "featured": false,
+        "new": true,
+        "active": true
+      },
+      "contentStatus": "demo"
+    },
+    {
+      "id": "demo-w05",
+      "slug": "muse-mini-bag",
+      "name": "Muse Mini Bag",
+      "audience": "womens",
+      "type": "handbag",
+      "categorySlug": "handbags",
+      "collectionSlugs": [
+        "womens-edit"
+      ],
+      "shortDescription": "A compact mini-bag concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-05.webp",
+          "role": "primary",
+          "alt": "Demo mini handbag product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      },
+      "contentStatus": "demo"
+    },
+    {
+      "id": "demo-w06",
+      "slug": "everyday-hobo",
+      "name": "Everyday Hobo",
+      "audience": "womens",
+      "type": "shoulder_bag",
+      "categorySlug": "shoulder-bags",
+      "collectionSlugs": [
+        "womens-edit",
+        "everyday-carry"
+      ],
+      "shortDescription": "A relaxed shoulder-bag concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-06.webp",
+          "role": "primary",
+          "alt": "Demo hobo bag product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      },
+      "contentStatus": "demo"
+    },
+    {
+      "id": "demo-w07",
+      "slug": "atelier-tote",
+      "name": "Atelier Tote",
+      "audience": "womens",
+      "type": "tote",
+      "categorySlug": "totes",
+      "collectionSlugs": [
+        "womens-edit"
+      ],
+      "shortDescription": "A structured tote concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-07.webp",
+          "role": "primary",
+          "alt": "Demo structured tote product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      },
+      "contentStatus": "demo"
+    },
+    {
+      "id": "demo-w08",
+      "slug": "curve-sling",
+      "name": "Curve Sling",
+      "audience": "womens",
+      "type": "sling",
+      "categorySlug": "sling-bags",
+      "collectionSlugs": [
+        "womens-edit"
+      ],
+      "shortDescription": "A compact sling concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-08.webp",
+          "role": "primary",
+          "alt": "Demo sling bag product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      },
+      "contentStatus": "demo"
+    },
+    {
+      "id": "demo-w09",
+      "slug": "daily-carry-purse",
+      "name": "Daily Carry Purse",
+      "audience": "womens",
+      "type": "purse",
+      "categorySlug": "handbags",
+      "collectionSlugs": [
+        "womens-edit"
+      ],
+      "shortDescription": "A small accessories concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-09.webp",
+          "role": "primary",
+          "alt": "Demo purse product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "contentStatus": "demo",
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      }
+    },
+    {
+      "id": "demo-w10",
+      "slug": "soft-form-shoulder",
+      "name": "Soft Form Shoulder Bag",
+      "audience": "womens",
+      "type": "shoulder_bag",
+      "categorySlug": "shoulder-bags",
+      "collectionSlugs": [
+        "womens-edit"
+      ],
+      "shortDescription": "A soft-form shoulder-bag concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-10.webp",
+          "role": "primary",
+          "alt": "Demo shoulder bag product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "contentStatus": "demo",
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      }
+    },
+    {
+      "id": "demo-w11",
+      "slug": "city-frame-tote",
+      "name": "City Frame Tote",
+      "audience": "womens",
+      "type": "tote",
+      "categorySlug": "totes",
+      "collectionSlugs": [
+        "womens-edit"
+      ],
+      "shortDescription": "A city tote concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-11.webp",
+          "role": "primary",
+          "alt": "Demo city tote product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "contentStatus": "demo",
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      }
+    },
+    {
+      "id": "demo-w12",
+      "slug": "mini-arc-crossbody",
+      "name": "Mini Arc Crossbody",
+      "audience": "womens",
+      "type": "sling",
+      "categorySlug": "sling-bags",
+      "collectionSlugs": [
+        "womens-edit"
+      ],
+      "shortDescription": "A small crossbody concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-12.webp",
+          "role": "primary",
+          "alt": "Demo crossbody bag product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "contentStatus": "demo",
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      }
+    },
+    {
+      "id": "demo-w13",
+      "slug": "classic-day-handbag",
+      "name": "Classic Day Handbag",
+      "audience": "womens",
+      "type": "handbag",
+      "categorySlug": "handbags",
+      "collectionSlugs": [
+        "womens-edit"
+      ],
+      "shortDescription": "A classic handbag concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-womens-13.webp",
+          "role": "primary",
+          "alt": "Demo classic handbag product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "contentStatus": "demo",
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      }
+    },
+    {
+      "id": "demo-s01",
+      "slug": "orbit-school-backpack",
+      "name": "Orbit School Backpack",
+      "audience": "student",
+      "type": "school_backpack",
+      "categorySlug": "school-backpacks",
+      "collectionSlugs": [
+        "school-student"
+      ],
+      "shortDescription": "A school-backpack concept for the demo catalogue. Verify dimensions and compartments before publication.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-student-01.webp",
+          "role": "primary",
+          "alt": "Demo school backpack product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "flags": {
+        "featured": true,
+        "new": false,
+        "active": true
+      },
+      "contentStatus": "demo"
+    },
+    {
+      "id": "demo-s02",
+      "slug": "campus-daypack",
+      "name": "Campus Daypack",
+      "audience": "student",
+      "type": "college_backpack",
+      "categorySlug": "college-backpacks",
+      "collectionSlugs": [
+        "school-student"
+      ],
+      "shortDescription": "A college backpack concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-student-02.webp",
+          "role": "primary",
+          "alt": "Demo college backpack product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "flags": {
+        "featured": true,
+        "new": true,
+        "active": true
+      },
+      "contentStatus": "demo"
+    },
+    {
+      "id": "demo-s03",
+      "slug": "stride-school-bag",
+      "name": "Stride School Bag",
+      "audience": "student",
+      "type": "school_backpack",
+      "categorySlug": "school-backpacks",
+      "collectionSlugs": [
+        "school-student"
+      ],
+      "shortDescription": "A practical school-bag concept; actual details to be confirmed.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-student-03.webp",
+          "role": "primary",
+          "alt": "Demo school bag product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "flags": {
+        "featured": true,
+        "new": false,
+        "active": true
+      },
+      "contentStatus": "demo"
+    },
+    {
+      "id": "demo-s04",
+      "slug": "study-route-backpack",
+      "name": "Study Route Backpack",
+      "audience": "student",
+      "type": "college_backpack",
+      "categorySlug": "college-backpacks",
+      "collectionSlugs": [
+        "school-student"
+      ],
+      "shortDescription": "A college backpack concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-student-04.webp",
+          "role": "primary",
+          "alt": "Demo student backpack product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      },
+      "contentStatus": "demo"
+    },
+    {
+      "id": "demo-s05",
+      "slug": "everyday-classic-pack",
+      "name": "Everyday Classic Pack",
+      "audience": "student",
+      "type": "school_backpack",
+      "categorySlug": "school-backpacks",
+      "collectionSlugs": [
+        "school-student"
+      ],
+      "shortDescription": "A school backpack concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-student-05.webp",
+          "role": "primary",
+          "alt": "Demo school backpack product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "contentStatus": "demo",
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      }
+    },
+    {
+      "id": "demo-s06",
+      "slug": "campus-utility-pack",
+      "name": "Campus Utility Pack",
+      "audience": "student",
+      "type": "college_backpack",
+      "categorySlug": "college-backpacks",
+      "collectionSlugs": [
+        "school-student"
+      ],
+      "shortDescription": "A college backpack concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-student-06.webp",
+          "role": "primary",
+          "alt": "Demo college backpack product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "contentStatus": "demo",
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      }
+    },
+    {
+      "id": "demo-s07",
+      "slug": "daily-study-backpack",
+      "name": "Daily Study Backpack",
+      "audience": "student",
+      "type": "school_backpack",
+      "categorySlug": "school-backpacks",
+      "collectionSlugs": [
+        "school-student"
+      ],
+      "shortDescription": "A school/student backpack concept for the demo catalogue.",
+      "price": null,
+      "currency": "INR",
+      "availability": "enquire",
+      "images": [
+        {
+          "url": "/images/products/demo-student-07.webp",
+          "role": "primary",
+          "alt": "Demo student backpack product image"
+        }
+      ],
+      "specifications": {},
+      "variants": [],
+      "contentStatus": "demo",
+      "flags": {
+        "featured": false,
+        "new": false,
+        "active": true
+      }
+    }
+  ],
+  "contact": {
+    "phone": null,
+    "whatsapp": null,
+    "email": null,
+    "address": "SAMPLE ADDRESS — replace with verified shop address before launch",
+    "openingHours": null,
+    "socials": {
+      "instagram": "https://www.instagram.com/",
+      "facebook": "https://www.facebook.com/",
+      "pinterest": "https://www.pinterest.com/"
+    },
+    "footerCredit": {
+      "text": "Created by chrysa",
+      "url": "https://chrysaaa.vercel.app/"
+    }
+  }
+}

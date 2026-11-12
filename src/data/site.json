@@ -1,0 +1,13 @@
+{
+  "brand": "CARRYFORM",
+  "descriptor": "Bags · Accessories · Everyday Style",
+  "tagline": "Every day has a way to carry.",
+  "defaultCurrency": "INR",
+  "seo": {
+    "defaultTitle": "CARRYFORM — Bags & Accessories",
+    "titleTemplate": "%s | CARRYFORM",
+    "defaultDescription": "Thoughtfully chosen bags for school days, city days, and everything in between. Explore handbags, totes, shoulder bags, and school backpacks.",
+    "ogImage": "/images/brand/og-default.jpg"
+  }
+}
+

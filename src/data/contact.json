@@ -1,0 +1,17 @@
+{
+  "phone": null,
+  "whatsapp": null,
+  "email": null,
+  "address": "SAMPLE ADDRESS — replace with verified shop address before launch",
+  "openingHours": null,
+  "socials": {
+    "instagram": "https://www.instagram.com/",
+    "facebook": "https://www.facebook.com/",
+    "pinterest": "https://www.pinterest.com/"
+  },
+  "footerCredit": {
+    "text": "Created by chrysa",
+    "url": "https://chrysaaa.vercel.app/"
+  }
+}
+

@@ -1,0 +1,524 @@
+[
+  {
+    "id": "demo-w01",
+    "slug": "forma-structured-handbag",
+    "name": "Forma Structured Handbag",
+    "audience": "womens",
+    "type": "handbag",
+    "categorySlug": "handbags",
+    "collectionSlugs": ["womens-edit"],
+    "shortDescription": "A clean-lined silhouette for everyday styling.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-01.jpg",
+        "alt": "Demo structured handbag on a neutral studio background",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": true, "new": false, "active": true },
+    "sortOrder": 1,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-w02",
+    "slug": "arc-shoulder-bag",
+    "name": "Arc Shoulder Bag",
+    "audience": "womens",
+    "type": "shoulder_bag",
+    "categorySlug": "shoulder-bags",
+    "collectionSlugs": ["womens-edit"],
+    "shortDescription": "A versatile shoulder-bag for the city and beyond.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-02.jpg",
+        "alt": "Demo shoulder bag product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": true, "new": true, "active": true },
+    "sortOrder": 2,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-w03",
+    "slug": "daylight-tote",
+    "name": "Daylight Tote",
+    "audience": "womens",
+    "type": "tote",
+    "categorySlug": "totes",
+    "collectionSlugs": ["womens-edit", "everyday-carry"],
+    "shortDescription": "A roomy tote for city outings and everyday errands.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-03.jpg",
+        "alt": "Demo tote bag product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": true, "new": false, "active": true },
+    "sortOrder": 3,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-w04",
+    "slug": "linea-crossbody",
+    "name": "Linea Crossbody",
+    "audience": "womens",
+    "type": "sling",
+    "categorySlug": "sling-bags",
+    "collectionSlugs": ["womens-edit"],
+    "shortDescription": "A compact crossbody for hands-free days.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-04.jpg",
+        "alt": "Demo crossbody bag product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": true, "active": true },
+    "sortOrder": 4,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-w05",
+    "slug": "muse-mini-bag",
+    "name": "Muse Mini Bag",
+    "audience": "womens",
+    "type": "handbag",
+    "categorySlug": "handbags",
+    "collectionSlugs": ["womens-edit"],
+    "shortDescription": "A compact mini bag with an editorial character.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-05.jpg",
+        "alt": "Demo mini handbag product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 5,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-w06",
+    "slug": "everyday-hobo",
+    "name": "Everyday Hobo",
+    "audience": "womens",
+    "type": "shoulder_bag",
+    "categorySlug": "shoulder-bags",
+    "collectionSlugs": ["womens-edit", "everyday-carry"],
+    "shortDescription": "A relaxed shoulder bag for unhurried days.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-06.jpg",
+        "alt": "Demo hobo bag product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 6,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-w07",
+    "slug": "atelier-tote",
+    "name": "Atelier Tote",
+    "audience": "womens",
+    "type": "tote",
+    "categorySlug": "totes",
+    "collectionSlugs": ["womens-edit"],
+    "shortDescription": "A structured tote with clean, considered proportions.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-07.jpg",
+        "alt": "Demo structured tote product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 7,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-w08",
+    "slug": "curve-sling",
+    "name": "Curve Sling",
+    "audience": "womens",
+    "type": "sling",
+    "categorySlug": "sling-bags",
+    "collectionSlugs": ["womens-edit"],
+    "shortDescription": "A compact sling with a softly curved silhouette.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-08.jpg",
+        "alt": "Demo sling bag product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 8,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-w09",
+    "slug": "daily-carry-purse",
+    "name": "Daily Carry Purse",
+    "audience": "womens",
+    "type": "purse",
+    "categorySlug": "handbags",
+    "collectionSlugs": ["womens-edit"],
+    "shortDescription": "A small accessories piece for the everyday essentials.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-09.jpg",
+        "alt": "Demo purse product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 9,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-w10",
+    "slug": "soft-form-shoulder",
+    "name": "Soft Form Shoulder Bag",
+    "audience": "womens",
+    "type": "shoulder_bag",
+    "categorySlug": "shoulder-bags",
+    "collectionSlugs": ["womens-edit"],
+    "shortDescription": "A soft-structured shoulder bag for effortless carry.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-10.jpg",
+        "alt": "Demo shoulder bag product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 10,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-w11",
+    "slug": "city-frame-tote",
+    "name": "City Frame Tote",
+    "audience": "womens",
+    "type": "tote",
+    "categorySlug": "totes",
+    "collectionSlugs": ["womens-edit"],
+    "shortDescription": "A city tote with a clean architectural frame.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-11.jpg",
+        "alt": "Demo city tote product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 11,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-w12",
+    "slug": "mini-arc-crossbody",
+    "name": "Mini Arc Crossbody",
+    "audience": "womens",
+    "type": "sling",
+    "categorySlug": "sling-bags",
+    "collectionSlugs": ["womens-edit"],
+    "shortDescription": "A small crossbody with an arc silhouette.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-12.jpg",
+        "alt": "Demo crossbody bag product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 12,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-w13",
+    "slug": "classic-day-handbag",
+    "name": "Classic Day Handbag",
+    "audience": "womens",
+    "type": "handbag",
+    "categorySlug": "handbags",
+    "collectionSlugs": ["womens-edit"],
+    "shortDescription": "A classic structured handbag for all-day carry.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-womens-13.jpg",
+        "alt": "Demo classic handbag product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 13,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-s01",
+    "slug": "orbit-school-backpack",
+    "name": "Orbit School Backpack",
+    "audience": "student",
+    "type": "school_backpack",
+    "categorySlug": "school-backpacks",
+    "collectionSlugs": ["school-student"],
+    "shortDescription": "A school backpack made for the everyday rhythm of study and routine.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-student-01.jpg",
+        "alt": "Demo school backpack product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": true, "new": false, "active": true },
+    "sortOrder": 14,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-s02",
+    "slug": "campus-daypack",
+    "name": "Campus Daypack",
+    "audience": "student",
+    "type": "college_backpack",
+    "categorySlug": "college-backpacks",
+    "collectionSlugs": ["school-student"],
+    "shortDescription": "A college backpack ready for every new beginning.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-student-02.jpg",
+        "alt": "Demo college backpack product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": true, "new": true, "active": true },
+    "sortOrder": 15,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-s03",
+    "slug": "stride-school-bag",
+    "name": "Stride School Bag",
+    "audience": "student",
+    "type": "school_backpack",
+    "categorySlug": "school-backpacks",
+    "collectionSlugs": ["school-student"],
+    "shortDescription": "A practical school bag for organised routines.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-student-03.jpg",
+        "alt": "Demo school bag product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": true, "new": false, "active": true },
+    "sortOrder": 16,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-s04",
+    "slug": "study-route-backpack",
+    "name": "Study Route Backpack",
+    "audience": "student",
+    "type": "college_backpack",
+    "categorySlug": "college-backpacks",
+    "collectionSlugs": ["school-student"],
+    "shortDescription": "A college backpack for study days and daily commutes.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-student-04.jpg",
+        "alt": "Demo student backpack product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 17,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-s05",
+    "slug": "everyday-classic-pack",
+    "name": "Everyday Classic Pack",
+    "audience": "student",
+    "type": "school_backpack",
+    "categorySlug": "school-backpacks",
+    "collectionSlugs": ["school-student"],
+    "shortDescription": "A school backpack with a timeless, dependable shape.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-student-05.jpg",
+        "alt": "Demo school backpack product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 18,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-s06",
+    "slug": "campus-utility-pack",
+    "name": "Campus Utility Pack",
+    "audience": "student",
+    "type": "college_backpack",
+    "categorySlug": "college-backpacks",
+    "collectionSlugs": ["school-student"],
+    "shortDescription": "A college backpack with organised carry for study and campus life.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-student-06.jpg",
+        "alt": "Demo college backpack product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 19,
+    "contentStatus": "demo"
+  },
+  {
+    "id": "demo-s07",
+    "slug": "daily-study-backpack",
+    "name": "Daily Study Backpack",
+    "audience": "student",
+    "type": "school_backpack",
+    "categorySlug": "school-backpacks",
+    "collectionSlugs": ["school-student"],
+    "shortDescription": "A school and student backpack for every day of the term.",
+    "description": null,
+    "price": null,
+    "currency": "INR",
+    "availability": "enquire",
+    "images": [
+      {
+        "url": "/images/products/demo-student-07.jpg",
+        "alt": "Demo student backpack product image",
+        "role": "primary"
+      }
+    ],
+    "specifications": {},
+    "variants": [],
+    "flags": { "featured": false, "new": false, "active": true },
+    "sortOrder": 20,
+    "contentStatus": "demo"
+  }
+]
+
+
