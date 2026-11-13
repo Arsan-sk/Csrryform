@@ -112,6 +112,57 @@ img {
   justify-content: center;
 }
 
+/* Hero follow-through: a compact proof band before the editorial story begins. */
+.proof-points {
+  min-height: clamp(10rem, 24vh, 15rem);
+  display: flex;
+  align-items: center;
+  background: var(--color-wine);
+  color: var(--color-ivory);
+  border-top: 1px solid color-mix(in srgb, var(--color-brass) 52%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-espresso) 18%, transparent);
+}
+.proof-points-inner {
+  width: min(100%, 90rem);
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 4vw, 4rem);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.proof-point {
+  min-width: 0;
+  padding: .5rem clamp(.75rem, 3vw, 2.5rem);
+  text-align: center;
+  border-right: 1px solid color-mix(in srgb, var(--color-ivory) 24%, transparent);
+}
+.proof-point:last-child { border-right: 0; }
+.proof-point-value {
+  margin: 0;
+  color: var(--color-ivory);
+  font-family: var(--font-serif);
+  font-size: clamp(2.15rem, 4.3vw, 4rem);
+  font-style: italic;
+  line-height: .95;
+  letter-spacing: -.04em;
+  white-space: nowrap;
+}
+.proof-point-value span {
+  color: var(--color-brass);
+  font-size: .58em;
+  font-style: normal;
+  margin-left: .1em;
+  vertical-align: top;
+}
+.proof-point-label {
+  margin: .85rem 0 0;
+  color: color-mix(in srgb, var(--color-ivory) 76%, transparent);
+  font-family: var(--font-mono);
+  font-size: clamp(.55rem, .75vw, .7rem);
+  letter-spacing: .14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
 /* Admin workspace */
 .admin-shell {
   min-height: 72dvh;
@@ -201,4 +252,11 @@ img {
   .curated-controls-mobile { display: block; margin-top: .75rem; padding: .75rem 0 0; }
   .curated-controls-desktop { display: none; }
   .floating-whatsapp { right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); }
+  .proof-points { min-height: auto; }
+  .proof-points-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 1.75rem .75rem; }
+  .proof-point { padding: .85rem .5rem; }
+  .proof-point:nth-child(2) { border-right: 0; }
+  .proof-point:nth-child(-n + 2) { border-bottom: 1px solid color-mix(in srgb, var(--color-ivory) 24%, transparent); }
+  .proof-point-value { font-size: clamp(1.7rem, 9vw, 2.5rem); }
+  .proof-point-label { margin-top: .55rem; font-size: .52rem; letter-spacing: .1em; }
 }

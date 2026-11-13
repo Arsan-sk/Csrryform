@@ -1,5 +1,6 @@
 import { getActiveProducts, getCollections } from '@/lib/data';
 import { HeroShowroom } from '@/components/home/HeroShowroom';
+import { CarryformProofPoints } from '@/components/home/CarryformProofPoints';
 import { BrandIntroduction } from '@/components/home/BrandIntroduction';
 import { CollectionDoors } from '@/components/home/CollectionDoors';
 import { CuratedProductStage } from '@/components/home/CuratedProductStage';
@@ -46,6 +47,7 @@ export default async function HomePage() {
     <>
       {/* 01 & 02: Hero Showroom with Zipper Reveal (100% full screen height & width) */}
       <HeroShowroom />
+      <CarryformProofPoints />
 
       {/* 03: Brand Introduction — Dedicated Atelier Craftsmanship Photography */}
       <BrandIntroduction />
@@ -76,4 +78,3 @@ export default async function HomePage() {
     </>
   );
 }
-
