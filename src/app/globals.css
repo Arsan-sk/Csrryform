@@ -141,6 +141,7 @@ img {
   transition: background-color .2s, color .2s;
 }
 .admin-nav { display: flex; flex-direction: column; gap: .25rem; margin-top: 2.5rem; }
+.admin-nav-logout { display: none; color: var(--color-wine); }
 .admin-nav-icon { display: block; font-size: 1.1rem; line-height: 1; margin-bottom: .35rem; }
 .admin-nav-item:hover, .admin-nav-item.is-active {
   color: var(--color-wine);
@@ -181,16 +182,23 @@ img {
 .curated-controls-mobile { display: none; }
 .curated-controls-desktop { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, var(--color-espresso) 10%, transparent); }
 .creator-wave { display: inline-block; margin-left: .25rem; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; line-height: 1; cursor: pointer; transform-origin: 70% 70%; animation: carryform-wave 2.5s ease-in-out infinite; }
+.navbar-whatsapp-dot { width: .45rem; height: .45rem; border-radius: 999px; background: currentColor; opacity: .8; }
+.floating-whatsapp { position: fixed; right: clamp(1rem, 3vw, 2rem); bottom: max(1.25rem, env(safe-area-inset-bottom)); z-index: 45; display: inline-flex; align-items: center; justify-content: center; width: 3.25rem; height: 3.25rem; border: 1px solid color-mix(in srgb, #25D366 65%, white); border-radius: 999px; background: #25D366; color: #102b19; box-shadow: 0 10px 24px rgba(16, 43, 25, .2); transition: transform 160ms ease-out, box-shadow 160ms ease-out, background-color 160ms ease-out; }
+.floating-whatsapp:hover { background: #37dc73; box-shadow: 0 13px 28px rgba(16, 43, 25, .28); transform: translateY(-2px); }
+.floating-whatsapp:active { transform: scale(.97); }
+.floating-whatsapp svg { width: 1.15rem; height: 1.15rem; fill: currentColor; }
 @keyframes carryform-wave { 0%, 60%, 100% { transform: rotate(0deg); } 10%, 25% { transform: rotate(14deg); } 18% { transform: rotate(-8deg); } 32% { transform: rotate(10deg); } }
 @media (prefers-reduced-motion: reduce) { .creator-wave { animation: none; } }
 @media (max-width: 767px) {
   .admin-shell { display: block; }
   .admin-sidebar { width: 100%; border-right: 0; border-bottom: 1px solid color-mix(in srgb, var(--color-espresso) 12%, transparent); padding: 1.25rem 1rem 5.75rem; }
-  .admin-sidebar .admin-nav { position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 0; padding: .5rem .35rem calc(.5rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--color-ivory) 96%, white); border-top: 1px solid color-mix(in srgb, var(--color-espresso) 14%, transparent); box-shadow: 0 -8px 24px rgba(48,37,31,.08); }
+  .admin-sidebar .admin-nav { position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin: 0; padding: .5rem .35rem calc(.5rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--color-ivory) 96%, white); border-top: 1px solid color-mix(in srgb, var(--color-espresso) 14%, transparent); box-shadow: 0 -8px 24px rgba(48,37,31,.08); }
   .admin-nav-item { width: 100%; min-height: 3.4rem; padding: .45rem .2rem; text-align: center; white-space: nowrap; font-size: .68rem; border-radius: .35rem; }
+  .admin-nav-logout { display: block; }
   .admin-nav-icon { font-size: 1.15rem; margin-bottom: .25rem; }
   .admin-sidebar > div:last-child { display: none; }
   .admin-main { padding-top: 2rem; padding-bottom: 1.5rem; }
   .curated-controls-mobile { display: block; margin-top: .75rem; padding: .75rem 0 0; }
   .curated-controls-desktop { display: none; }
+  .floating-whatsapp { right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); }
 }

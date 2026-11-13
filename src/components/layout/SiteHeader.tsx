@@ -5,13 +5,15 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
 import type { NavItem } from '@/types/site';
+import { buildGenericWhatsAppUrl } from '@/lib/whatsapp';
 
 interface SiteHeaderProps {
   navItems: NavItem[];
   brandName: string;
+  whatsappNumber?: string | null;
 }
 
-export function SiteHeader({ navItems, brandName }: SiteHeaderProps) {
+export function SiteHeader({ navItems, brandName, whatsappNumber }: SiteHeaderProps) {
   const pathname = usePathname();
   const [visible, setVisible] = useState(true);
   const [scrolled, setScrolled] = useState(false);
@@ -22,6 +24,7 @@ export function SiteHeader({ navItems, brandName }: SiteHeaderProps) {
 
   const isHome = pathname === '/';
   const isDarkHero = isHome && !scrolled && !menuOpen;
+  const whatsappUrl = buildGenericWhatsAppUrl(whatsappNumber);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -137,6 +140,21 @@ export function SiteHeader({ navItems, brandName }: SiteHeaderProps) {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
+            {whatsappUrl && (
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center gap-2 px-3.5 py-1.5 border text-xs font-medium rounded-sm transition-colors active:scale-98 ${
+                  isDarkHero
+                    ? 'border-ivory/35 text-ivory hover:border-ivory hover:bg-white/10'
+                    : 'border-sage/70 text-espresso hover:border-sage hover:bg-sage/15'
+                }`}
+              >
+                <span className="navbar-whatsapp-dot" aria-hidden="true" />
+                WhatsApp
+              </a>
+            )}
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-4 py-1.5 bg-wine text-white text-xs font-medium rounded-sm hover:bg-wine/90 transition-colors shadow-sm active:scale-98"
@@ -210,6 +228,18 @@ export function SiteHeader({ navItems, brandName }: SiteHeaderProps) {
                 </div>
               ))}
               <div className="pt-3 pb-2">
+                {whatsappUrl && (
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full px-4 py-2.5 mb-2 border border-sage text-espresso text-xs uppercase tracking-wider font-medium rounded-sm hover:bg-sage/15 transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <span className="navbar-whatsapp-dot" aria-hidden="true" />
+                    WhatsApp
+                  </a>
+                )}
                 <Link
                   href="/contact"
                   className="block w-full text-center px-4 py-2.5 bg-wine text-white text-xs uppercase tracking-wider font-medium rounded-sm hover:bg-wine/90 transition-colors"

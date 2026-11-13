@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
+import { FloatingWhatsApp } from '@/components/layout/FloatingWhatsApp';
 import type { ContactInfo, NavItem } from '@/types/site';
 
 interface PublicChromeProps {
@@ -31,7 +32,7 @@ export function PublicChrome({
 
   return (
     <>
-      <SiteHeader navItems={navItems} brandName={brandName} />
+      <SiteHeader navItems={navItems} brandName={brandName} whatsappNumber={contact.whatsapp} />
       <main id="main-content" className="flex-1">{children}</main>
       <SiteFooter
         contact={contact}
@@ -40,6 +41,7 @@ export function PublicChrome({
         descriptor={descriptor}
         tagline={tagline}
       />
+      <FloatingWhatsApp phoneNumber={contact.whatsapp} />
     </>
   );
 }

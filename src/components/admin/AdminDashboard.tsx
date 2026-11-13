@@ -87,6 +87,10 @@ export function AdminDashboard() {
               <span>{panelMeta[item].label}</span>
             </button>
           ))}
+          <button onClick={signOut} className="admin-nav-item admin-nav-logout">
+            <span className="admin-nav-icon" aria-hidden="true">↪</span>
+            <span>Logout</span>
+          </button>
         </nav>
         <div className="mt-auto pt-8">
           <Link href="/" className="text-xs text-espresso/55 hover:text-wine block mb-4">View live site ↗</Link>

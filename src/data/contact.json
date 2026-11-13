@@ -1,6 +1,6 @@
 {
   "phone": null,
-  "whatsapp": null,
+  "whatsapp": "919284086903",
   "email": null,
   "address": "SAMPLE ADDRESS — replace with verified shop address before launch",
   "openingHours": null,
@@ -14,4 +14,3 @@
     "url": "https://chrysaaa.vercel.app/"
   }
 }
-
