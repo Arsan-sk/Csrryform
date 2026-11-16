@@ -5,7 +5,7 @@
 import type { NormalisedProduct, Product } from '@/types/product';
 import type { Collection, Category } from '@/types/collection';
 import type { LandingPageConfig } from '@/types/site';
-import type { DataProvider, ProductFilters, ProductSortKey } from './provider';
+import type { DataProvider } from './provider';
 import { normaliseProduct } from './provider';
 import { jsonProvider } from './json-provider';
 

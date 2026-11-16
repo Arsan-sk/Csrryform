@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
-import { EnquirySchema } from '@/lib/validation/enquiry';
+import { EnquirySchema, type ValidatedEnquiry } from '@/lib/validation/enquiry';
 
 export async function POST(request: Request) {
   try {
-    const json = await request.json();
+    const json = await request.json() as ValidatedEnquiry;
 
     // Validate with Zod
     const result = EnquirySchema.safeParse(json);
@@ -66,7 +66,7 @@ export async function POST(request: Request) {
       success: true,
       message: 'Your enquiry has been received. We will contact you soon.',
     });
-  } catch (err: any) {
+  } catch (err) {
     console.error('[CARRYFORM Enquiries] Route error:', err);
     return NextResponse.json(
       { success: false, message: 'Server error processing enquiry.' },

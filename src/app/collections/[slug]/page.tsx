@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { getCollectionBySlug, getProductsByCollection, getCategories } from '@/lib/data';
+import type { ProductSortKey } from '@/lib/data/provider';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { CollectionProductList } from '@/components/collections/CollectionProductList';
 
@@ -24,13 +25,13 @@ export default async function CollectionDetailPage({
   searchParams,
 }: CollectionPageProps) {
   const { slug } = await params;
-  const { category, sort } = await searchParams;
+  const { category, sort = 'featured' } = await searchParams;
 
   const collection = await getCollectionBySlug(slug);
   if (!collection) notFound();
 
   const [products, allCategories] = await Promise.all([
-    getProductsByCollection(slug, { categorySlug: category }, sort as any),
+    getProductsByCollection(slug, { categorySlug: category }, sort),
     getCategories(),
   ]);
 

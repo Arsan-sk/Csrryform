@@ -53,11 +53,13 @@ export function SiteHeader({ navItems, brandName, whatsappNumber }: SiteHeaderPr
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close menu on route change
-  useEffect(() => {
-    setMenuOpen(false);
-    setOpenDropdown(null);
-  }, [pathname]);
+  // Close menu on route change during render without effect cascading
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    if (menuOpen) setMenuOpen(false);
+    if (openDropdown !== null) setOpenDropdown(null);
+  }
 
   return (
     <header

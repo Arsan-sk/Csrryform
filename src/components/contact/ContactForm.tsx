@@ -40,9 +40,11 @@ export function ContactForm({ initialProductSlug }: ContactFormProps) {
       }
 
       setStatus('success');
-    } catch (err: any) {
+    } catch (err: unknown) {
       setStatus('error');
-      setErrorMessage(err.message || 'Something went wrong. Please try again.');
+      setErrorMessage(
+        err instanceof Error ? err.message : 'Something went wrong. Please try again.'
+      );
     }
   };
 

@@ -1,14 +1,7 @@
-// CARRYFORM — JSON data provider
-// Reads from src/data/*.json files. Used by default and as fallback.
-
 import type { NormalisedProduct, Product } from '@/types/product';
 import type { Collection, Category } from '@/types/collection';
 import type { LandingPageConfig } from '@/types/site';
-import type {
-  DataProvider,
-  ProductFilters,
-  ProductSortKey,
-} from './provider';
+import type { DataProvider, ProductSortKey } from './provider';
 import { normaliseProduct } from './provider';
 import { ProductSchema } from '@/lib/validation/product';
 import { CollectionSchema, CategorySchema } from '@/lib/validation/collection';

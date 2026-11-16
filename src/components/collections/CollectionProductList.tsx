@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useTransition } from 'react';
+import { useTransition } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
@@ -11,7 +11,6 @@ import { getProductBadge } from '@/lib/utils';
 interface CollectionProductListProps {
   initialProducts: NormalisedProduct[];
   categories: Category[];
-  collectionSlug: string;
   activeCategory?: string;
   activeSort?: string;
 }
@@ -19,7 +18,6 @@ interface CollectionProductListProps {
 export function CollectionProductList({
   initialProducts,
   categories,
-  collectionSlug,
   activeCategory,
   activeSort = 'featured',
 }: CollectionProductListProps) {

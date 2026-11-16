@@ -32,7 +32,7 @@ export function ProductModal({
   onClose,
   onSave,
 }: ProductModalProps) {
-  const [draft, setDraft] = useState<Product>({
+  const [draft, setDraft] = useState<Product>(() => ({
     ...product,
     specifications: product.specifications || {},
     images: product.images || [],
@@ -40,7 +40,7 @@ export function ProductModal({
     currency: product.currency || 'INR',
     availability: product.availability || 'enquire',
     collectionSlugs: product.collectionSlugs || [],
-  });
+  }));
 
   const [activeTab, setActiveTab] = useState<'basics' | 'pricing' | 'images' | 'specs' | 'sections'>('basics');
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -198,17 +198,19 @@ export function ProductModal({
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap border-b border-espresso/10 mt-4 -mb-px text-xs font-mono">
-          {[
-            { id: 'basics', label: '1. Essentials' },
-            { id: 'pricing', label: '2. Pricing & Availability' },
-            { id: 'images', label: `3. Photography (${draft.images.length})` },
-            { id: 'specs', label: '4. Specifications' },
-            { id: 'sections', label: '5. Landing-Page Sections' },
-          ].map((tab) => (
+          {(
+            [
+              { id: 'basics', label: '1. Essentials' },
+              { id: 'pricing', label: '2. Pricing & Availability' },
+              { id: 'images', label: `3. Photography (${draft.images.length})` },
+              { id: 'specs', label: '4. Specifications' },
+              { id: 'sections', label: '5. Landing-Page Sections' },
+            ] as const
+          ).map((tab) => (
             <button
               key={tab.id}
               type="button"
-              onClick={() => setActiveTab(tab.id as any)}
+              onClick={() => setActiveTab(tab.id)}
               className={`px-3 py-2 border-b-2 font-medium transition-colors cursor-pointer ${
                 activeTab === tab.id
                   ? 'border-wine text-wine'

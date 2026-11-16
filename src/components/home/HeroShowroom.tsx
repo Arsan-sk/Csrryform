@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { gsap } from 'gsap';
@@ -11,18 +11,13 @@ export function HeroShowroom() {
   const maskRef = useRef<HTMLDivElement>(null);
   const zipperPullRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const [revealed, setRevealed] = useState(false);
 
   useGSAP(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) {
-      setRevealed(true);
-      return;
-    }
+    if (prefersReduced) return;
 
     // Zipper reveal signature moment (PRD §6.4.A)
     const tl = gsap.timeline({
-      onComplete: () => setRevealed(true),
       delay: 0.15,
     });
 

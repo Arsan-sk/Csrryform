@@ -130,7 +130,8 @@ function AdminDashboardInner() {
 
   // Active landing page config with safe defaults
   const currentLandingPage: LandingPageConfig = useMemo(() => {
-    if (!content?.site?.landingPage) {
+    const lp = content?.site?.landingPage;
+    if (!lp) {
       return {
         showroomSlugs: [
           'forma-structured-handbag',
@@ -154,9 +155,9 @@ function AdminDashboardInner() {
       };
     }
     return {
-      showroomSlugs: content.site.landingPage.showroomSlugs || [],
-      selectedPiecesSlugs: content.site.landingPage.selectedPiecesSlugs || [],
-      artGallerySlugs: content.site.landingPage.artGallerySlugs || [],
+      showroomSlugs: lp.showroomSlugs || [],
+      selectedPiecesSlugs: lp.selectedPiecesSlugs || [],
+      artGallerySlugs: lp.artGallerySlugs || [],
     };
   }, [content?.site?.landingPage]);
 
@@ -223,22 +224,18 @@ function AdminDashboardInner() {
   ) {
     if (!content) return;
     const exists = content.products.some((p) => p.id === savedProduct.id);
-    let updatedProducts: Product[];
-
-    if (exists) {
-      updatedProducts = content.products.map((p) =>
-        p.id === savedProduct.id ? savedProduct : p
-      );
-    } else {
-      const newProductWithId = {
-        ...savedProduct,
-        id: savedProduct.id || `prod-${Date.now()}`,
-      };
-      updatedProducts = [newProductWithId, ...content.products];
-    }
+    const updatedProducts: Product[] = exists
+      ? content.products.map((p) => (p.id === savedProduct.id ? savedProduct : p))
+      : [
+          {
+            ...savedProduct,
+            id: savedProduct.id || `prod-${Date.now()}`,
+          },
+          ...content.products,
+        ];
 
     // Also update landing page section assignments if provided
-    let updatedLandingPage = { ...currentLandingPage };
+    const updatedLandingPage = { ...currentLandingPage };
     if (sectionAssignments) {
       const slug = savedProduct.slug;
 
@@ -301,7 +298,7 @@ function AdminDashboardInner() {
   ) {
     if (!content) return;
     const slug = product.slug;
-    let nextLp = { ...currentLandingPage };
+    const nextLp = { ...currentLandingPage };
 
     if (section === 'showroom') {
       const isAssigned = nextLp.showroomSlugs.includes(slug);
@@ -378,9 +375,9 @@ function AdminDashboardInner() {
   function handleBulkAssignSection(section: 'showroom' | 'selectedPieces' | 'artGallery') {
     if (!content || selectedIds.length === 0) return;
     const selectedProducts = content.products.filter((p) => selectedIds.includes(p.id));
-    let nextLp = { ...currentLandingPage };
+    const nextLp = { ...currentLandingPage };
     let addedCount = 0;
-    let skippedReasons: string[] = [];
+    const skippedReasons: string[] = [];
 
     for (const p of selectedProducts) {
       if (section === 'showroom') {
@@ -447,7 +444,7 @@ function AdminDashboardInner() {
     const selectedSlugs = new Set(
       content.products.filter((p) => selectedIds.includes(p.id)).map((p) => p.slug)
     );
-    let nextLp = {
+    const nextLp = {
       showroomSlugs: currentLandingPage.showroomSlugs.filter((s) => !selectedSlugs.has(s)),
       selectedPiecesSlugs: currentLandingPage.selectedPiecesSlugs.filter((s) => !selectedSlugs.has(s)),
       artGallerySlugs: currentLandingPage.artGallerySlugs.filter((s) => !selectedSlugs.has(s)),
