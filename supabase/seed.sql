@@ -592,5 +592,5 @@ values ('site_config', '{"brand":"CARRYFORM","descriptor":"Bags · Accessories �
 on conflict (key) do update set value = excluded.value;
 
 insert into public.site_settings (key, value)
-values ('contact_info', '{"phone":null,"whatsapp":"919284086903","email":null,"address":"SAMPLE ADDRESS — replace with verified shop address before launch","openingHours":null,"socials":{"instagram":"https://www.instagram.com/","facebook":"https://www.facebook.com/","pinterest":"https://www.pinterest.com/"},"footerCredit":{"text":"Created by chrysa","url":"https://chrysaaa.vercel.app/"}}'::jsonb)
+values ('contact_info', '{"phone":null,"whatsapp":"91XXXXX XXXXX","email":null,"address":"SAMPLE ADDRESS — replace with verified shop address before launch","openingHours":null,"socials":{"instagram":"https://www.instagram.com/","facebook":"https://www.facebook.com/","pinterest":"https://www.pinterest.com/"},"footerCredit":{"text":"Created by chrysa","url":"https://chrysaaa.vercel.app/"}}'::jsonb)
 on conflict (key) do update set value = excluded.value;
