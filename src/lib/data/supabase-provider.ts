@@ -4,8 +4,10 @@
 
 import type { NormalisedProduct, Product } from '@/types/product';
 import type { Collection, Category } from '@/types/collection';
+import type { LandingPageConfig } from '@/types/site';
 import type { DataProvider, ProductFilters, ProductSortKey } from './provider';
 import { normaliseProduct } from './provider';
+import { jsonProvider } from './json-provider';
 
 // We import the server client lazily to avoid bundling Supabase into every page
 async function getClient() {
@@ -242,6 +244,28 @@ export const supabaseProvider: DataProvider = {
       sortOrder: c.sort_order as number | undefined,
       isActive: (c.is_active as boolean) ?? true,
     }));
+  },
+
+  async getLandingPageConfig(): Promise<LandingPageConfig> {
+    try {
+      const supabase = await getClient();
+      const { data, error } = await supabase
+        .from('site_settings')
+        .select('value')
+        .eq('key', 'site_config')
+        .single();
+      if (!error && data?.value && typeof data.value === 'object') {
+        const val = data.value as Record<string, unknown>;
+        if (val.landingPage && typeof val.landingPage === 'object') {
+          return val.landingPage as LandingPageConfig;
+        }
+      }
+    } catch (err) {
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn('[CARRYFORM Supabase] Failed to fetch landingPage config:', err);
+      }
+    }
+    return jsonProvider.getLandingPageConfig();
   },
 };
 

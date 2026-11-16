@@ -165,8 +165,9 @@ img {
 
 /* Admin workspace */
 .admin-shell {
-  min-height: 72dvh;
+  min-height: 100dvh;
   display: flex;
+  align-items: flex-start;
   background: color-mix(in srgb, var(--color-ivory) 88%, white);
 }
 .admin-sidebar {
@@ -176,6 +177,10 @@ img {
   border-right: 1px solid color-mix(in srgb, var(--color-espresso) 12%, transparent);
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
 }
 .admin-main {
   width: 100%;

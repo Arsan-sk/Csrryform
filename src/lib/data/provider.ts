@@ -4,6 +4,7 @@
 
 import type { Product, NormalisedProduct } from '@/types/product';
 import type { Collection, Category } from '@/types/collection';
+import type { LandingPageConfig } from '@/types/site';
 
 export interface ProductFilters {
   categorySlug?: string;
@@ -28,6 +29,7 @@ export interface DataProvider {
   getFeaturedCollections(): Promise<Collection[]>;
   getCollectionBySlug(slug: string): Promise<Collection | null>;
   getCategories(): Promise<Category[]>;
+  getLandingPageConfig(): Promise<LandingPageConfig>;
 }
 
 // Normalise a raw product to ensure primaryImage is always set

@@ -3,6 +3,7 @@
 
 import type { NormalisedProduct, Product } from '@/types/product';
 import type { Collection, Category } from '@/types/collection';
+import type { LandingPageConfig } from '@/types/site';
 import type {
   DataProvider,
   ProductFilters,
@@ -15,6 +16,7 @@ import { CollectionSchema, CategorySchema } from '@/lib/validation/collection';
 import rawProducts from '@/data/products.json';
 import rawCollections from '@/data/collections.json';
 import rawCategories from '@/data/categories.json';
+import siteData from '@/data/site.json';
 
 function parseProducts(): NormalisedProduct[] {
   return (rawProducts as unknown[])
@@ -91,7 +93,7 @@ function sortProducts(
 
 export const jsonProvider: DataProvider = {
   async getActiveProducts() {
-    return getProducts().filter((p) => p.flags.active);
+    return getProducts();
   },
 
   async getFeaturedProducts(limit = 6) {
@@ -107,12 +109,12 @@ export const jsonProvider: DataProvider = {
   },
 
   async getProductBySlug(slug) {
-    return getProducts().find((p) => p.slug === slug && p.flags.active) ?? null;
+    return getProducts().find((p) => p.slug === slug) ?? null;
   },
 
   async getProductsByCollection(collectionSlug, filters, sort) {
     let results = getProducts().filter(
-      (p) => p.flags.active && p.collectionSlugs.includes(collectionSlug)
+      (p) => p.collectionSlugs.includes(collectionSlug)
     );
     if (filters?.categorySlug) {
       results = results.filter((p) => p.categorySlug === filters.categorySlug);
@@ -152,6 +154,31 @@ export const jsonProvider: DataProvider = {
 
   async getCategories() {
     return getCategories().filter((c) => c.isActive !== false);
+  },
+
+  async getLandingPageConfig(): Promise<LandingPageConfig> {
+    const lp = (siteData as { landingPage?: LandingPageConfig }).landingPage;
+    return lp || {
+      showroomSlugs: [
+        'forma-structured-handbag',
+        'orbit-school-backpack',
+        'arc-shoulder-bag',
+        'campus-daypack',
+      ],
+      selectedPiecesSlugs: [
+        'daylight-tote',
+        'linea-crossbody',
+        'muse-mini-bag',
+        'campus-utility-pack',
+        'everyday-hobo',
+        'daily-study-backpack',
+      ],
+      artGallerySlugs: [
+        'stride-school-bag',
+        'study-route-backpack',
+        'everyday-classic-pack',
+      ],
+    };
   },
 };
 

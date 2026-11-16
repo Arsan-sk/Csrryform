@@ -588,7 +588,7 @@ end $$;
 
 -- 4. SITE SETTINGS
 insert into public.site_settings (key, value)
-values ('site_config', '{"brand":"CARRYFORM","descriptor":"Bags · Accessories · Everyday Style","tagline":"Every day has a way to carry.","defaultCurrency":"INR","seo":{"defaultTitle":"CARRYFORM — Bags & Accessories","titleTemplate":"%s | CARRYFORM","defaultDescription":"Thoughtfully chosen bags for school days, city days, and everything in between. Explore handbags, totes, shoulder bags, and school backpacks.","ogImage":"/images/brand/og-default.jpg"}}'::jsonb)
+values ('site_config', '{"brand":"CARRYFORM","descriptor":"Bags · Accessories · Everyday Style","tagline":"Every day has a way to carry.","defaultCurrency":"INR","seo":{"defaultTitle":"CARRYFORM — Bags & Accessories","titleTemplate":"%s | CARRYFORM","defaultDescription":"Thoughtfully chosen bags for school days, city days, and everything in between. Explore handbags, totes, shoulder bags, and school backpacks.","ogImage":"/images/brand/og-default.jpg"},"landingPage":{"showroomSlugs":["forma-structured-handbag","orbit-school-backpack","arc-shoulder-bag","campus-daypack"],"selectedPiecesSlugs":["daylight-tote","linea-crossbody","muse-mini-bag","campus-utility-pack","everyday-hobo","daily-study-backpack"],"artGallerySlugs":["stride-school-bag","study-route-backpack","everyday-classic-pack"]}}'::jsonb)
 on conflict (key) do update set value = excluded.value;
 
 insert into public.site_settings (key, value)

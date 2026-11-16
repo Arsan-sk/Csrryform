@@ -88,4 +88,7 @@ export async function getCollectionBySlug(slug: string) {
 export async function getCategories() {
   return (await getProvider()).getCategories();
 }
+export async function getLandingPageConfig() {
+  return (await getProvider()).getLandingPageConfig();
+}
 

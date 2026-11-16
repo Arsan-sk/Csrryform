@@ -1,74 +1,70 @@
-import { getActiveProducts, getCollections } from '@/lib/data';
+import { getActiveProducts, getCollections, getLandingPageConfig } from '@/lib/data';
 import { HeroShowroom } from '@/components/home/HeroShowroom';
 import { CarryformProofPoints } from '@/components/home/CarryformProofPoints';
 import { BrandIntroduction } from '@/components/home/BrandIntroduction';
 import { CollectionDoors } from '@/components/home/CollectionDoors';
-import { CuratedProductStage } from '@/components/home/CuratedProductStage';
-import { StudentSpotlight } from '@/components/home/StudentSpotlight';
-import { MaterialStory } from '@/components/home/MaterialStory';
-import { LifestyleStories } from '@/components/home/LifestyleStories';
-import { FeaturedProductGrid } from '@/components/home/FeaturedProductGrid';
+import { HomeDynamicSections } from '@/components/home/HomeDynamicSections';
 import { WhyCarryform } from '@/components/home/WhyCarryform';
 import { ContactBand } from '@/components/home/ContactBand';
 import contactData from '@/data/contact.json';
 
 export default async function HomePage() {
-  const [allProducts, collections] = await Promise.all([
+  const [allProducts, collections, landingPage] = await Promise.all([
     getActiveProducts(),
     getCollections(),
+    getLandingPageConfig(),
   ]);
 
-  const womensProducts = allProducts.filter((p) => p.audience === 'womens');
-  const studentProducts = allProducts.filter((p) => p.audience === 'student');
+  // Build slug-indexed lookup
+  const bySlug = new Map(allProducts.map((p) => [p.slug, p]));
 
-  // Curated Showcase Stage: 4 signature hero pieces (2 women's, 2 student)
-  const curatedShowcase = [
-    womensProducts[0],  // Forma Structured Handbag (demo-womens-01)
-    studentProducts[0], // Orbit School Backpack (demo-student-01)
-    womensProducts[1],  // Arc Shoulder Bag (demo-womens-02)
-    studentProducts[1], // Campus Daypack (demo-student-02)
-  ].filter(Boolean);
+  // Chapter 4 — Showroom Carousel (dynamic products, fallback to first 4)
+  const initialShowroom = landingPage?.showroomSlugs?.length
+    ? (landingPage.showroomSlugs.map((s) => bySlug.get(s)).filter(Boolean) as typeof allProducts)
+    : allProducts.slice(0, 4);
 
-  // Student Spotlight: 3 distinct student editions (never repeated on the page)
-  const studentSpotlight = studentProducts.slice(2, 5);
-  // [Stride School Bag (demo-student-03), Study Route Backpack (demo-student-04), Everyday Classic Pack (demo-student-05)]
+  // Chapter 5 — Art Gallery / Ready for a New Beginning (dynamic products, max 3, fallback to student)
+  const initialArtGallery = landingPage?.artGallerySlugs?.length
+    ? (landingPage.artGallerySlugs
+        .slice(0, 3)
+        .map((s) => bySlug.get(s))
+        .filter(Boolean) as typeof allProducts)
+    : allProducts.filter((p) => p.audience === 'student').slice(0, 3);
 
-  // Selected Pieces Grid: 6 distinct pieces (4 women's, 2 student - never repeated on the page)
-  const selectedGridPieces = [
-    womensProducts[2],  // Daylight Tote (demo-womens-03)
-    womensProducts[3],  // Linea Crossbody (demo-womens-04)
-    womensProducts[4],  // Muse Mini Bag (demo-womens-05)
-    studentProducts[5], // Campus Utility Pack (demo-student-06)
-    womensProducts[5],  // Everyday Hobo (demo-womens-06)
-    studentProducts[6], // Daily Study Backpack (demo-student-07)
-  ].filter(Boolean);
+  // Selected Pieces Grid (dynamic products, max 6, fallback)
+  const initialSelectedPieces = landingPage?.selectedPiecesSlugs?.length
+    ? (landingPage.selectedPiecesSlugs
+        .slice(0, 6)
+        .map((s) => bySlug.get(s))
+        .filter(Boolean) as typeof allProducts)
+    : allProducts.slice(0, 6);
 
   return (
     <>
-      {/* 01 & 02: Hero Showroom with Zipper Reveal (100% full screen height & width) */}
+      {/* 01 & 02: Hero Showroom with Zipper Reveal (100% full screen height & width, hardcoded image) */}
       <HeroShowroom />
       <CarryformProofPoints />
 
-      {/* 03: Brand Introduction — Dedicated Atelier Craftsmanship Photography */}
+      {/* 03: Chapter 2 — Brand Introduction (Dedicated Atelier Craftsmanship, hardcoded image) */}
       <BrandIntroduction />
 
-      {/* 04: Two Worlds — Collection Doors (Dedicated Collection Photography) */}
+      {/* 04: Chapter 3 — Two Worlds Collection Doors (Dedicated Collection Photography, hardcoded 2 images) */}
       <CollectionDoors collections={collections} />
 
-      {/* 05: Curated Edit — Product Showcase Stage (4 unique pieces) */}
-      <CuratedProductStage products={curatedShowcase} />
-
-      {/* 06: Student Spotlight — School & Student Hero Chapter (3 distinct student bags) */}
-      <StudentSpotlight products={studentSpotlight} />
-
-      {/* 07: Material Story — A Closer Look */}
-      <MaterialStory />
-
-      {/* 08: Lifestyle Stories — Everyday Scenes */}
-      <LifestyleStories />
-
-      {/* 09: Selected Pieces Grid — 6 distinct bags */}
-      <FeaturedProductGrid products={selectedGridPieces} />
+      {/* 05–09: Dynamic Landing-Page Sections:
+          - Chapter 4: Curated Showroom Stage (dynamic products)
+          - Chapter 5: Art Gallery / Ready for a New Beginning (dynamic products, max 3)
+          - Chapter 6: Material Story (architectural details, no products)
+          - Lifestyle Stories (brand imagery)
+          - Selected Pieces Grid (dynamic products, max 6)
+          Synced with Supabase on the server and live client repository in browser! */}
+      <HomeDynamicSections
+        initialShowroom={initialShowroom}
+        initialArtGallery={initialArtGallery}
+        initialSelectedPieces={initialSelectedPieces}
+        allProducts={allProducts}
+        landingPageConfig={landingPage}
+      />
 
       {/* 10: Why CARRYFORM — Four Pillars */}
       <WhyCarryform />

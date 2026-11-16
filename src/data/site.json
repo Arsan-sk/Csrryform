@@ -8,6 +8,27 @@
     "titleTemplate": "%s | CARRYFORM",
     "defaultDescription": "Thoughtfully chosen bags for school days, city days, and everything in between. Explore handbags, totes, shoulder bags, and school backpacks.",
     "ogImage": "/images/brand/og-default.jpg"
+  },
+  "landingPage": {
+    "showroomSlugs": [
+      "forma-structured-handbag",
+      "orbit-school-backpack",
+      "arc-shoulder-bag",
+      "campus-daypack"
+    ],
+    "selectedPiecesSlugs": [
+      "daylight-tote",
+      "linea-crossbody",
+      "muse-mini-bag",
+      "campus-utility-pack",
+      "everyday-hobo",
+      "daily-study-backpack"
+    ],
+    "artGallerySlugs": [
+      "stride-school-bag",
+      "study-route-backpack",
+      "everyday-classic-pack"
+    ]
   }
 }
 

@@ -1,5 +1,11 @@
 // CARRYFORM — Site settings and navigation types
 
+export interface LandingPageConfig {
+  showroomSlugs: string[];      // Chapter 4 — up to 4+ products for showroom carousel
+  selectedPiecesSlugs: string[]; // "Selected Pieces" section — max 6
+  artGallerySlugs: string[];    // Chapter 5 "Art Gallery" (Ready for New Beginning) — max 3
+}
+
 export interface SocialLinks {
   instagram?: string;
   facebook?: string;
@@ -33,6 +39,7 @@ export interface SiteSettings {
     defaultDescription: string;
     ogImage?: string;
   };
+  landingPage?: LandingPageConfig;
 }
 
 export interface NavItem {

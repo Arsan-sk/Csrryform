@@ -44,7 +44,13 @@ function parseContent(value: string | null): AdminContent | null {
       products,
       collections,
       categories,
-      site: parsed.site,
+      site: {
+        ...(siteData as AdminContent['site']),
+        ...parsed.site,
+        landingPage:
+          parsed.site.landingPage ||
+          (siteData as unknown as { landingPage?: AdminContent['site']['landingPage'] }).landingPage,
+      },
       contact: parsed.contact,
       updatedAt: parsed.updatedAt ?? new Date().toISOString(),
     };

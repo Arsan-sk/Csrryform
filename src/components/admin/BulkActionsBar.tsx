@@ -5,12 +5,8 @@ import React from 'react';
 interface BulkActionsBarProps {
   selectedCount: number;
   totalFiltered: number;
-  onActivate: () => void;
-  onDeactivate: () => void;
-  onMarkFeatured: () => void;
-  onRemoveFeatured: () => void;
-  onMarkNew: () => void;
-  onRemoveNew: () => void;
+  onAssignSection?: (section: 'showroom' | 'selectedPieces' | 'artGallery') => void;
+  onRemoveFromSections?: () => void;
   onDelete: () => void;
   onClear: () => void;
 }
@@ -18,12 +14,8 @@ interface BulkActionsBarProps {
 export function BulkActionsBar({
   selectedCount,
   totalFiltered,
-  onActivate,
-  onDeactivate,
-  onMarkFeatured,
-  onRemoveFeatured,
-  onMarkNew,
-  onRemoveNew,
+  onAssignSection,
+  onRemoveFromSections,
   onDelete,
   onClear,
 }: BulkActionsBarProps) {
@@ -45,76 +37,78 @@ export function BulkActionsBar({
         <button
           type="button"
           onClick={onClear}
-          className="text-xs text-ivory/70 hover:text-ivory underline ml-2"
+          className="text-xs text-ivory/70 hover:text-ivory underline ml-2 cursor-pointer"
         >
           Deselect all
         </button>
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <div className="flex items-center border border-ivory/20 rounded-sm overflow-hidden text-xs">
-          <button
-            type="button"
-            onClick={onActivate}
-            className="px-2.5 py-1.5 hover:bg-ivory/15 transition-colors border-r border-ivory/20"
-            title="Make all selected products active"
-          >
-            Activate
-          </button>
-          <button
-            type="button"
-            onClick={onDeactivate}
-            className="px-2.5 py-1.5 hover:bg-ivory/15 transition-colors text-ivory/80"
-            title="Hide all selected products from showroom"
-          >
-            Deactivate
-          </button>
-        </div>
+      <div className="flex flex-wrap items-center gap-2.5">
+        {onAssignSection && (
+          <div className="flex items-center border border-ivory/20 rounded-sm overflow-hidden text-xs">
+            <span className="px-2.5 py-1.5 bg-ivory/10 text-ivory/70 border-r border-ivory/20 font-mono text-[11px]">
+              Assign to:
+            </span>
+            <button
+              type="button"
+              onClick={() => onAssignSection('showroom')}
+              className="px-2.5 py-1.5 hover:bg-ivory/15 transition-colors border-r border-ivory/20 cursor-pointer"
+              title="Add eligible selected products to Chapter 4 Showroom"
+            >
+              Showroom
+            </button>
+            <button
+              type="button"
+              onClick={() => onAssignSection('selectedPieces')}
+              className="px-2.5 py-1.5 hover:bg-ivory/15 transition-colors border-r border-ivory/20 cursor-pointer"
+              title="Add eligible selected products to Selected Pieces (Max 6)"
+            >
+              Selected Pieces
+            </button>
+            <button
+              type="button"
+              onClick={() => onAssignSection('artGallery')}
+              className="px-2.5 py-1.5 hover:bg-ivory/15 transition-colors cursor-pointer"
+              title="Add eligible selected products to Art Gallery (Max 3)"
+            >
+              Art Gallery
+            </button>
+          </div>
+        )}
 
-        <div className="flex items-center border border-ivory/20 rounded-sm overflow-hidden text-xs">
+        {onRemoveFromSections && (
           <button
             type="button"
-            onClick={onMarkFeatured}
-            className="px-2.5 py-1.5 hover:bg-ivory/15 transition-colors border-r border-ivory/20"
-            title="Mark selected as featured"
+            onClick={onRemoveFromSections}
+            className="px-3 py-1.5 text-xs text-ivory/80 hover:text-ivory border border-ivory/20 rounded-sm hover:bg-ivory/10 transition-colors cursor-pointer"
+            title="Remove selected products from all landing page sections"
           >
-            + Featured
+            Clear Sections
           </button>
-          <button
-            type="button"
-            onClick={onRemoveFeatured}
-            className="px-2.5 py-1.5 hover:bg-ivory/15 transition-colors text-ivory/80"
-            title="Remove from featured"
-          >
-            - Featured
-          </button>
-        </div>
+        )}
 
-        <div className="flex items-center border border-ivory/20 rounded-sm overflow-hidden text-xs">
-          <button
-            type="button"
-            onClick={onMarkNew}
-            className="px-2.5 py-1.5 hover:bg-ivory/15 transition-colors border-r border-ivory/20"
-            title="Badge selected as new"
-          >
-            + New
-          </button>
-          <button
-            type="button"
-            onClick={onRemoveNew}
-            className="px-2.5 py-1.5 hover:bg-ivory/15 transition-colors text-ivory/80"
-            title="Remove new badge"
-          >
-            - New
-          </button>
-        </div>
-
+        {/* Prominent Trash Delete Action Button */}
         <button
           type="button"
           onClick={onDelete}
-          className="px-3 py-1.5 bg-wine text-white text-xs font-medium rounded-sm hover:bg-wine/90 transition-colors ml-1 shadow-xs"
+          className="px-3.5 py-1.5 text-xs font-medium bg-wine text-white rounded-sm hover:bg-wine/90 active:scale-95 transition-all inline-flex items-center gap-1.5 cursor-pointer shadow-sm ml-auto sm:ml-0"
+          title="Delete selected products"
         >
-          Delete ({selectedCount})
+          <svg
+            className="w-3.5 h-3.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+            />
+          </svg>
+          <span>Delete ({selectedCount})</span>
         </button>
       </div>
     </div>
