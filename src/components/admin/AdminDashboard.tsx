@@ -14,6 +14,8 @@ import { ProductFilters, type ProductFilterState } from './ProductFilters';
 import { BulkActionsBar } from './BulkActionsBar';
 import { ProductModal } from './ProductModal';
 import { DeleteConfirmModal } from './DeleteConfirmModal';
+import { MobileTabBar } from './MobileTabBar';
+import { MobileProductCard } from './MobileProductCard';
 
 type Panel = 'overview' | 'products' | 'collections' | 'content';
 
@@ -538,6 +540,9 @@ function AdminDashboardInner() {
           </button>
         </nav>
 
+        {/* Mobile Tab Bar for smaller screens */}
+        <MobileTabBar activePanel={panel} onChange={setPanel} />
+
         <div className="mt-auto pt-8 border-t border-espresso/10">
           <Link
             href="/"
@@ -637,19 +642,39 @@ function AdminDashboardInner() {
             />
 
             {/* Product Table */}
-            <ProductTable
-              products={filteredProducts}
-              categories={content.categories}
-              collections={content.collections}
-              selectedIds={selectedIds}
-              landingPage={currentLandingPage}
-              onToggleSelect={toggleSelectProduct}
-              onSelectAllVisible={selectAllVisible}
-              onClearSelection={clearSelection}
-              onEdit={setEditingProduct}
-              onDelete={(p) => setDeleteDialog({ isOpen: true, items: [p] })}
-              onToggleSection={handleToggleSection}
-            />
+            <div className="hidden md:block">
+              <ProductTable
+                products={filteredProducts}
+                categories={content.categories}
+                collections={content.collections}
+                selectedIds={selectedIds}
+                landingPage={currentLandingPage}
+                onToggleSelect={toggleSelectProduct}
+                onSelectAllVisible={selectAllVisible}
+                onClearSelection={clearSelection}
+                onEdit={setEditingProduct}
+                onDelete={(p) => setDeleteDialog({ isOpen: true, items: [p] })}
+                onToggleSection={handleToggleSection}
+              />
+            </div>
+
+            {/* Mobile Product View */}
+            <div className="md:hidden space-y-6">
+              {filteredProducts.map((product) => (
+                <MobileProductCard
+                  key={product.id}
+                  product={product}
+                  categories={content.categories}
+                  collections={content.collections}
+                  isSelected={selectedIds.includes(product.id)}
+                  landingPage={currentLandingPage}
+                  onToggleSelect={toggleSelectProduct}
+                  onEdit={setEditingProduct}
+                  onDelete={(p) => setDeleteDialog({ isOpen: true, items: [p] })}
+                  onToggleSection={handleToggleSection}
+                />
+              ))}
+            </div>
 
             {/* Landing-Page Section Assignments Manager */}
             <LandingPageSectionManager
