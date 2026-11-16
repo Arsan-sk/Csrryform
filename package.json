@@ -1,6 +1,7 @@
 {
   "name": "carryform",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Editorial Luxury & Architectural Bag Storefront Template with Next.js 16 and Supabase Readiness",
   "private": true,
   "scripts": {
     "dev": "next dev",

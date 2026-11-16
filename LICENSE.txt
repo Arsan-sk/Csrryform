@@ -1,0 +1,56 @@
+CARRYFORM COMMERCIAL SINGLE-USE TEMPLATE LICENSE
+
+Copyright (c) 2026 CARRYFORM / chrysa. All rights reserved.
+
+IMPORTANT: PLEASE READ THIS LICENSE AGREEMENT CAREFULLY BEFORE DOWNLOADING,
+INSTALLING, OR USING THE CARRYFORM SOURCE CODE AND TEMPLATE ASSETS.
+
+1. GRANT OF LICENSE
+Subject to the terms and conditions of this Agreement, the purchase of one (1)
+license grants the licensee ("Buyer") a non-exclusive, non-transferable,
+perpetual commercial license to install, customize, modify, and utilize the
+CARRYFORM source code template for exactly one (1) End Product.
+
+2. PERMITTED USES
+Under this License, the Buyer MAY:
+a) Customize, edit, rebrand, and adapt the source code to create one (1) website
+   or application ("End Product").
+b) Deploy and operate the single End Product for Buyer's own personal or business
+   use, OR for one (1) client project where the End Product is created on behalf
+   of that specific client.
+c) Include modified compiled output in the deployed single End Product.
+
+3. PROHIBITED USES & RESTRICTIONS
+Under this License, the Buyer MAY NOT:
+a) Resell, re-license, redistribute, lease, share, sublicense, or publish the
+   uncompiled or compiled CARRYFORM source code, in whole or in part, as a website
+   template, UI kit, boilerplate, theme, or design asset.
+b) Distribute the source code in any publicly accessible public repository or
+   download archive where third parties can extract the original template.
+c) Use the template for more than one (1) End Product or client project without
+   purchasing an additional license for each distinct deployment.
+d) Claim original authorship or ownership of the CARRYFORM architecture, design
+   patterns, or proprietary assets.
+
+4. INTELLECTUAL PROPERTY & OWNERSHIP
+The CARRYFORM template, including its software architecture, layout styling,
+animations, and documentation, is protected by copyright and intellectual
+property laws. Title, copyright, and ownership rights to the template remain
+with the original creator. This License grants usage rights, not ownership.
+
+5. THIRD-PARTY ASSETS & DEPENDENCIES
+CARRYFORM incorporates open-source software libraries (such as Next.js, React,
+Tailwind CSS, GSAP, Motion, and Swiper) and royalty-free demonstration
+photographs. Each third-party library and asset remains subject to its respective
+original license terms. Demonstration images included in the `/public/images/`
+folder are intended solely for layout demonstration; the Buyer is responsible
+for replacing all demonstration photography with Buyer's own authorized product
+imagery prior to commercial launch.
+
+6. DISCLAIMER OF WARRANTIES & LIMITATION OF LIABILITY
+THE TEMPLATE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHOR
+OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
