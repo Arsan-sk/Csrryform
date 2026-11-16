@@ -7,9 +7,12 @@ export function isDevelopmentAdminEnabled() {
 }
 
 export function authenticateAdmin(username: string, password: string) {
-  if (!isDevelopmentAdminEnabled()) return false;
-  const expectedUsername = process.env.NEXT_PUBLIC_CARRYFORM_ADMIN_USERNAME ?? 'admin';
-  const expectedPassword = process.env.NEXT_PUBLIC_CARRYFORM_ADMIN_PASSWORD ?? 'admin';
+  // Auth works in any environment as long as the admin credentials env vars are set.
+  // In production without credentials configured, reject instead of silently failing.
+  const expectedUsername = process.env.NEXT_PUBLIC_CARRYFORM_ADMIN_USERNAME;
+  const expectedPassword = process.env.NEXT_PUBLIC_CARRYFORM_ADMIN_PASSWORD;
+
+  if (!expectedUsername || !expectedPassword) return false;
   return username === expectedUsername && password === expectedPassword;
 }
 

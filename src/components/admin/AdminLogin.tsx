@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { FormEvent, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { authenticateAdmin, isDevelopmentAdminEnabled, setAdminSession } from '@/lib/admin-auth';
+import { authenticateAdmin, setAdminSession } from '@/lib/admin-auth';
 
 export function AdminLogin() {
   const router = useRouter();
@@ -19,9 +19,7 @@ export function AdminLogin() {
     setLoading(true);
     window.setTimeout(() => {
       if (!authenticateAdmin(username.trim(), password)) {
-        setError(isDevelopmentAdminEnabled()
-          ? 'Those details do not match the development account.'
-          : 'Admin authentication is not configured for this environment.');
+        setError('Invalid credentials.');
         setLoading(false);
         return;
       }

@@ -11,6 +11,7 @@ import { getProductBadge } from '@/lib/utils';
 interface CollectionProductListProps {
   initialProducts: NormalisedProduct[];
   categories: Category[];
+  collectionSlug?: string;
   activeCategory?: string;
   activeSort?: string;
 }
@@ -18,6 +19,7 @@ interface CollectionProductListProps {
 export function CollectionProductList({
   initialProducts,
   categories,
+  collectionSlug,
   activeCategory,
   activeSort = 'featured',
 }: CollectionProductListProps) {

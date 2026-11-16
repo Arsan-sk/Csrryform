@@ -5,6 +5,12 @@ import type { ProductSortKey } from '@/lib/data/provider';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { CollectionProductList } from '@/components/collections/CollectionProductList';
 
+// Helper to normalize sort string to ProductSortKey
+function normalizeSort(sort: string | undefined): ProductSortKey {
+  const validSorts: ProductSortKey[] = ['featured', 'newest', 'price_asc', 'price_desc'];
+  return (validSorts as string[]).includes(sort ?? '') ? ((sort ?? 'featured') as ProductSortKey) : 'featured';
+}
+
 interface CollectionPageProps {
   params: Promise<{ slug: string }>;
   searchParams: Promise<{ category?: string; sort?: string }>;
@@ -30,8 +36,10 @@ export default async function CollectionDetailPage({
   const collection = await getCollectionBySlug(slug);
   if (!collection) notFound();
 
+  const normalizedSort = normalizeSort(sort);
+
   const [products, allCategories] = await Promise.all([
-    getProductsByCollection(slug, { categorySlug: category }, sort),
+    getProductsByCollection(slug, { categorySlug: category }, normalizedSort),
     getCategories(),
   ]);
 

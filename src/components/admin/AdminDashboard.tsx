@@ -16,8 +16,7 @@ import { ProductModal } from './ProductModal';
 import { DeleteConfirmModal } from './DeleteConfirmModal';
 import { MobileTabBar } from './MobileTabBar';
 import { MobileProductCard } from './MobileProductCard';
-
-type Panel = 'overview' | 'products' | 'collections' | 'content';
+import type { Panel } from './admin-panels';
 
 const panelMeta: Record<Panel, { label: string; icon: string }> = {
   overview: { label: 'Overview', icon: '⌂' },

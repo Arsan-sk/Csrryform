@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import type { Panel } from './AdminDashboard';
+import type { Panel } from './admin-panels';
 
 const panelMeta: Record<Panel, { label: string; icon: string }> = {
   overview: { label: 'Overview', icon: '⌂' },
