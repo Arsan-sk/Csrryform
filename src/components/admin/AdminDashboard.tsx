@@ -506,7 +506,7 @@ function AdminDashboardInner() {
 
   return (
     <div className="admin-shell">
-      {/* Sidebar Navigation — Sticky on desktop */}
+      {/* Sidebar Navigation — Sticky on desktop, hidden on mobile (tab bar takes over) */}
       <aside className="admin-sidebar">
         <Link
           href="/"
@@ -539,9 +539,6 @@ function AdminDashboardInner() {
           </button>
         </nav>
 
-        {/* Mobile Tab Bar for smaller screens */}
-        <MobileTabBar activePanel={panel} onChange={setPanel} />
-
         <div className="mt-auto pt-8 border-t border-espresso/10">
           <Link
             href="/"
@@ -559,6 +556,31 @@ function AdminDashboardInner() {
           </button>
         </div>
       </aside>
+
+      {/* Mobile top bar — replaces the desktop sidebar on small screens */}
+      <div className="admin-mobile-bar md:hidden">
+        <Link href="/" className="font-serif text-lg tracking-tight text-espresso">
+          CARRYFORM
+        </Link>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            target="_blank"
+            className="text-[11px] text-espresso/55 hover:text-wine transition-colors"
+          >
+            Live site ↗
+          </Link>
+          <button
+            onClick={handleSignOut}
+            className="text-[11px] text-wine hover:underline cursor-pointer"
+          >
+            Sign out
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile panel navigation — fixed bottom tab bar */}
+      <MobileTabBar activePanel={panel} onChange={setPanel} />
 
       {/* Main Content Pane */}
       <main className="admin-main">

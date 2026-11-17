@@ -24,6 +24,7 @@ export function MobileTabBar({ activePanel, onChange }: MobileTabBarProps) {
       className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-t border-espresso/10 shadow-lg px-2 pb-2 pt-1 md:hidden"
       role="tablist"
       aria-label="Admin panel navigation"
+      style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
       <div className="flex items-center justify-around gap-1 max-w-5xl mx-auto">
         {panels.map((panel) => (

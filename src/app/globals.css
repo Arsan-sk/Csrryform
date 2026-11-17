@@ -267,13 +267,9 @@ img {
 @media (prefers-reduced-motion: reduce) { .creator-wave { animation: none; } }
 @media (max-width: 767px) {
   .admin-shell { display: block; }
-  .admin-sidebar { width: 100%; border-right: 0; border-bottom: 1px solid color-mix(in srgb, var(--color-espresso) 12%, transparent); padding: 1.25rem 1rem 5.75rem; }
-  .admin-sidebar .admin-nav { position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin: 0; padding: .5rem .35rem calc(.5rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--color-ivory) 96%, white); border-top: 1px solid color-mix(in srgb, var(--color-espresso) 14%, transparent); box-shadow: 0 -8px 24px rgba(48,37,31,.08); }
-  .admin-nav-item { width: 100%; min-height: 3.4rem; padding: .45rem .2rem; text-align: center; white-space: nowrap; font-size: .68rem; border-radius: .35rem; }
-  .admin-nav-logout { display: block; }
-  .admin-nav-icon { font-size: 1.15rem; margin-bottom: .25rem; }
-  .admin-sidebar > div:last-child { display: none; }
-  .admin-main { padding-top: 2rem; padding-bottom: 1.5rem; }
+  .admin-sidebar { display: none; }
+  .admin-main { padding: 1.5rem 1rem calc(1.5rem + env(safe-area-inset-bottom) + 4rem); max-width: 100%; }
+  .admin-nav-item { display: none; }
   .curated-controls-mobile { display: block; margin-top: .75rem; padding: .75rem 0 0; }
   .curated-controls-desktop { display: none; }
   .floating-whatsapp { right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); }
@@ -284,4 +280,6 @@ img {
   .proof-point:nth-child(-n + 2) { border-bottom: 1px solid color-mix(in srgb, var(--color-ivory) 24%, transparent); }
   .proof-point-value { font-size: clamp(1.7rem, 9vw, 2.5rem); }
   .proof-point-label { margin-top: .55rem; font-size: .52rem; letter-spacing: .1em; }
+  .admin-mobile-bar { display: flex; align-items: center; justify-content: space-between; padding: .85rem 1rem; background: color-mix(in srgb, var(--color-ivory) 94%, white); border-bottom: 1px solid color-mix(in srgb, var(--color-espresso) 12%, transparent); margin-bottom: .75rem; }
+  .admin-mobile-bar .admin-mobile-brand { font-size: 1.15rem; }
 }
